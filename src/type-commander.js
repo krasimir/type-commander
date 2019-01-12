@@ -45,19 +45,19 @@
     let ops = [], opsCopy, onFinish;
 
     const setText = newStr => {
-    text.innerHTML = newStr.replace(/ /g, '&nbsp;');
-    invisibleText.innerHTML = newStr === '' ? '&nbsp;' : newStr.replace(/ /g, '&nbsp;');
-    api.text = newStr;
+      text.innerHTML = newStr.replace(/ /g, '&nbsp;');
+      invisibleText.innerHTML = newStr === '' ? '&nbsp;' : newStr.replace(/ /g, '&nbsp;');
+      api.text = newStr;
     }
     const movePosition = position => {
       position = typeof position !== 'undefined' ? position : api.text.length;
       let str = api.text.substr(0, position).replace(/ /g, '&nbsp;');
       invisibleText.innerHTML = str === '' ? '&nbsp' : str;
       api.cPosition = position;
-      f(() => css(
+      css(
         cursor, 
         cursorStyles(str === '' ? 0 : invisibleText.offsetWidth, invisibleText.offsetHeight)
-      ), 1);
+      );
     };
     const deleteChar = (done, speed) => {
       f(() => {
