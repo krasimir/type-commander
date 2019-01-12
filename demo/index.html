@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>type-commander</title>
+  <style>
+    body {
+      padding: 2em;
+      margin: 0;
+      font-family: Verdana;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- <script src="../src/type-commander.js"></script> -->
+  <script src="../type-commander.js"></script>
+  <div id="content"></div>
+  <script>
+    const tc = new TypeCommander('#content');
+
+    tc
+      .delay(3000)
+      .add('Hello world!').delay(2000)
+      .moveTo(5).delay(500)
+      .del('all').delay(300)
+      .add('Bye bye').delay(2000)
+      .del(4).delay(1000)
+      .moveTo().delay(3000)
+      .loop()
+      .go();
+  </script>
+</body>
+</html>
