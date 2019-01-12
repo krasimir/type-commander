@@ -17,6 +17,8 @@ I've made this as an alternative of [Typed.js](https://mattboldt.com/demos/typed
 * No styling
 * No multi-line text
 
+---
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [API](#api)
