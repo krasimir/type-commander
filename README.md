@@ -4,6 +4,8 @@ I've made this as an alternative of [Typed.js](https://mattboldt.com/demos/typed
 
 ![preview](./preview.gif)
 
+[Demo https://poet.codes/e/QMX5eZWJ1S7](https://poet.codes/e/QMX5eZWJ1S7#code.js)
+
 *Pros*
 
 * Full control on what and where is typed.
