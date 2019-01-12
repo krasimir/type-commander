@@ -22,7 +22,7 @@ I've made this as an alternative of [Typed.js](https://mattboldt.com/demos/typed
 - [Installation](#installation)
 - [Usage](#usage)
 - [API](#api)
-  - [`new TypeCommander(<selector>, <initial text>)`](#new-typecommanderselector-initial-text)
+  - [`TypeCommander(<selector>, <initial text>)`](#typecommanderselector-initial-text)
   - [`.delay(<time>)`](#delaytime)
   - [`.add(<text>, <speed>)`](#addtext-speed)
   - [`.del(<num of chars>, <speed>)`](#delnum-of-chars-speed)
@@ -47,7 +47,7 @@ or directly use
 ```
 
 ```js
-const tc = new TypeCommander('#content');
+const tc = TypeCommander('#content');
 
 tc
   .delay(3000)
@@ -65,7 +65,7 @@ The result is the gif above.
 
 ## API
 
-### `new TypeCommander(<selector>, <initial text>)`
+### `TypeCommander(<selector>, <initial text>)`
 
 |               | type          | description  |
 | ------------- |:-------------:| -----|
