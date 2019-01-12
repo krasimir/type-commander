@@ -1,6 +1,6 @@
 {
   "name": "type-commander",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "JavaScript animated typing",
   "main": "type-commander.js",
   "scripts": {

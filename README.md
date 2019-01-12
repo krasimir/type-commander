@@ -24,7 +24,7 @@ I've made this as an alternative of [Typed.js](https://mattboldt.com/demos/typed
 - [Installation](#installation)
 - [Usage](#usage)
 - [API](#api)
-  - [`TypeCommander(<selector>, <initial text>)`](#typecommanderselector-initial-text)
+  - [`TypeCommander(<selector>, <initial text>, <cursor options>)`](#typecommanderselector-initial-text-cursor-options)
   - [`.delay(<time>)`](#delaytime)
   - [`.add(<text>, <speed>)`](#addtext-speed)
   - [`.del(<num of chars>, <speed>)`](#delnum-of-chars-speed)
@@ -67,12 +67,13 @@ The result is the gif above.
 
 ## API
 
-### `TypeCommander(<selector>, <initial text>)`
+### `TypeCommander(<selector>, <initial text>, <cursor options>)`
 
 |               | type          | description  |
 | ------------- |:-------------:| -----|
 | selector      | `<string>`    | Valid DOM selector. |
 | initial text  | `<string>`    | (optional) The initial text of the field. |
+| cursor options  | `<object>`    | (optional) An object that has `width` and `height` properties to be set to the cursor. |
 | returns       | `<object>`    | Type commander instance. |
 
 ### `.delay(<time>)`

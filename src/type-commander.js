@@ -16,7 +16,7 @@
   const f = (func, delay) => (delay ? setTimeout(func, delay) : func());
   const clone  = obj => JSON.parse(JSON.stringify(obj));
 
-  return function TypeCommander(selector, initialText) {
+  return function TypeCommander(selector, initialText, cursorOpts) {
     const el = document.querySelector(selector);
     const text = document.createElement('span');
     const invisibleText = document.createElement('span');
@@ -27,8 +27,8 @@
         left: left + 'px',
         position: 'absolute',
         display: 'block',
-        width: '3px',
-        height: height + 'px',
+        width: cursorOpts && cursorOpts.width ? cursorOpts.width + 'px' : '3px',
+        height: cursorOpts && cursorOpts.height ? cursorOpts.height + 'px' : height + 'px',
         background: '#000',
         opacity: 1,
         transition: 'opacity 200ms ease-out',
@@ -43,6 +43,9 @@
       cursorBlinkingSpeed: 400
     };
     let ops = [], opsCopy, onFinish;
+
+    text.setAttribute('class', 'type-commander-text');
+    cursor.setAttribute('class', 'type-commander-cursor');
 
     const setText = newStr => {
       text.innerHTML = newStr.replace(/ /g, '&nbsp;');
